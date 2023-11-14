@@ -239,6 +239,7 @@ button:hover {
 
 /* estilos hasta 379 pixeles */
 @media screen and (max-width: 360px) {
+
   .site-navbar,
   .login-navbar,
   .description {
@@ -249,25 +250,28 @@ button:hover {
   }
   .top-header {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    
   }
-  .logo-formu-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .logo,
   .formu {
     display: flex;
-    flex: 1;
-    align-items: center;
+    width: 45%;
   }
-  .formu form {
+.logo {
+  margin-right:5px ;
+  width: 45%;
+}
+  .formu form{
     display: flex;
-    height: 30px;
   }
-
+  .formu form .submit{
+    width: 25%;
+  }
+.hand{
+ text-align: center;
+}
   .main-article > .envio {
     display: block;
     font-size: 16px;
@@ -294,6 +298,9 @@ button:hover {
 }
 
 @media screen and (min-width: 361px) {
+.top-header{
+  flex-basis:calc(33%);
+}
   .burger-menu {
     display: none;
   }
@@ -308,8 +315,10 @@ button:hover {
     flex-basis: calc(50% - 20px);
   }
   nav {
+    margin-top: 10px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
   }
   .site-navbar,
@@ -358,18 +367,15 @@ button:hover {
   }
 
   .logo {
-    width: 150px;
-    margin-right: 100px;
-    height: 60px;
+   width: 33%;
   }
 
   .formu {
-    flex: 1;
-    margin-right: 80px;
+  width: 33%;
   }
 
   .hand {
-    flex: 1;
+    width: 33%;
   }
   footer .apart {
     display: flex;
@@ -400,22 +406,20 @@ button:hover {
   .top-header {
     margin-bottom: 30px;
     display: flex;
-    justify-content: space-between;
-  }
-  .logo-formu-container {
-    flex: 66%;
-    height: 70px;
+    gap:1%
   }
   .logo {
-    display: flex;
-    width: 250px;
-    height: 60px;
+    width: 33%;
   }
 
   .hand {
-    font-size: 20px;
-    flex: 33%;
-    margin-right: 20px;
+    margin-right: 30px;
+    display:flex;
+  width: 33%;
+  justify-content: flex-end;
+  }
+  .formu{
+    width: 33%;
   }
   .site-navbar,
   .login-navbar {
@@ -425,5 +429,8 @@ button:hover {
     font-size: 15px;
     margin-right: 20px;
     margin-left: 5px;
+  }
+  nav{
+    justify-content: space-between;
   }
 }
