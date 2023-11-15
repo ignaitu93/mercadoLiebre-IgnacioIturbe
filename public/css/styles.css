@@ -189,6 +189,9 @@ label {
   color: #fff;
   background-color: #1259c3;
 }
+.description {
+  display: none;
+}
 
 .rotate-on-hover {
   font-size: 3em;
@@ -236,13 +239,23 @@ input:required:valid {
 button:hover {
   background-color: #eac926;
 }
+.main-article {
+  position: relative;
+}
+
+.main-article:hover .description {
+  display: flex;
+}
+
+.main-article:hover {
+  flex-direction: column;
+}
 
 /* estilos hasta 379 pixeles */
 @media screen and (max-width: 360px) {
 
   .site-navbar,
-  .login-navbar,
-  .description {
+  .login-navbar {
     display: none;
   }
   main section article {
@@ -285,20 +298,11 @@ button:hover {
     right: 20px;
     top: -15px;
   }
-  .main-article {
-    position: relative;
-  }
-.products:hover .description{
-    display:flex ;
-    
-  }
-  .products:hover .main-article{
-    flex-direction: column;
-  }
+ 
 }
 
 @media screen and (min-width: 361px) {
-.top-header{
+  .top-header{
   flex-basis:calc(33%);
 }
   .burger-menu {
@@ -330,9 +334,6 @@ button:hover {
   .main-article {
     display: flex;
     flex-direction: column;
-  }
-  h4.description {
-    display: block;
   }
   .products {
     display: flex;
