@@ -253,7 +253,9 @@ button:hover {
 
 /* estilos hasta 379 pixeles */
 @media screen and (max-width: 360px) {
-
+  main section div article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
   .site-navbar,
   .login-navbar {
     display: none;
@@ -308,7 +310,7 @@ button:hover {
   .burger-menu {
     display: none;
   }
-  main section div article {
+  main section div article:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
   .site-navbar,
